@@ -1,0 +1,548 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Your Page Title</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+
+  <style>
+    body {
+	background-color: #e9e7fd;
+}
+
+/* Main Container */
+
+#main-container {
+
+	align-items: center;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	min-height: 100vh;
+
+}
+
+/* Player Details */
+
+#player {
+
+	background-color: #d5deff;
+	border: 8px solid #4f3ff0;
+	border-radius: 10px;
+	margin-top: 50px;
+	padding: 20px;
+	width: 550px;
+
+}
+
+#player-type {
+
+	color: #4f3ff0;
+	font-family: "Poppins";
+	letter-spacing: 5px;
+	text-align: center;
+	text-transform: uppercase;
+
+}
+
+/* Grid */
+
+#grid {
+
+	background-color: #4f3ff0;
+	border: 3.5px solid #d5deff;
+	border-radius: 8px;
+	box-shadow: 2px 3px 7px grey;
+	margin-top: 50px;
+	max-width: 600px;
+	padding: 3px;
+
+}
+
+/* Grid Row */
+
+.row {
+
+	display: flex;
+
+}
+
+/* Grid Column */
+
+.col {
+
+	align-items: center;
+	background-color: #d5deff;
+	border: 1px solid  #4f3ff0;
+	border-radius: 5px;
+	display: flex;
+	justify-content: center;
+	height: 75px;
+	margin: 5px;
+	width:  75px;
+
+}
+
+/* Buttons */
+
+.btn {
+
+	background-color: transparent;
+	border: none;
+	color: transparent;
+	height: 100%;
+	padding: 0;
+	width: 100%;
+
+}
+
+#reset-btn {
+
+	background-color: transparent;
+	border: 2px solid #4f3ff0;
+	border-radius: 5px;
+	color: #4f3ff0;
+	font-family: "Poppins";
+	font-size: 1.5rem;
+	margin: 50px 0;
+	padding: 10px 40px;
+	text-transform: uppercase;
+	transition: 0.7s;
+
+}
+
+#reset-btn:hover {
+
+	background-color: #4f3ff0;
+	color: #d5deff;
+	cursor: pointer;
+	transition: 0.7s;
+
+}
+
+/* Player - 1 Buttons */
+
+.btn-player-1 {
+
+	background-color: #34c471;
+	border: 2px solid #34c471;
+	border-radius: 50%;
+	color: red;
+	height:  50px;
+	width: 50px;
+
+}
+
+/* Player - 2 Buttons */
+
+.btn-player-2 {
+
+	background-color: #df3670;
+	border: 2px solid #df3670;
+	border-radius: 50%;
+	color: red;
+	height:  50px;
+	width: 50px;
+
+}
+
+/* Media Queries */
+
+@media (max-width: 800px) {
+	#grid {
+		width: 500px;
+	}
+
+	.col {
+		height: 62px;
+		margin: 4px;
+		width: 62px;
+	}
+
+	#player {
+		width: 450px;
+	}
+
+	#reset-btn {
+		font-size: 1.2rem;
+	}
+
+	.btn-player-1 {
+		height: 40px;
+		width: 40px;
+	}
+
+	.btn-player-2 {
+		height: 40px;
+		width: 40px;
+	}
+}
+
+@media (max-width: 550px) {
+	#grid {
+		width: 400px;
+	}
+
+	.col {
+		height: 50px;
+		margin: 3px;
+		width: 50px;
+	}
+
+	#player {
+		width: 350px;
+	}
+
+	#reset-btn {
+		font-size: 1rem;
+	}
+
+	.btn-player-1 {
+		height: 30px;
+		width: 30px;
+	}
+
+	.btn-player-2 {
+		height: 30px;
+		width: 30px;
+	}
+}
+
+@media (max-width:  450px) {
+	#grid {
+		width: 90%;
+	}
+
+	.col {
+		height: 40px;
+		margin: 2px;
+	}
+
+	#player {
+		align-items: center;
+		display: flex;
+		border-width: 5px;
+		justify-content: center;
+		height: 30px;
+		width: 78%;
+	}
+
+	#player-type {
+		font-size: 1.2rem;
+	}
+
+	#reset-btn {
+		font-size: 0.8rem;
+	}
+
+	.btn-player-1 {
+		height: 20px;
+		width: 20px;
+	}
+
+	.btn-player-2 {
+		height: 20px;
+		width: 20px;
+	}
+}
+  </style>
+</head>
+<body>
+<div id="main-container">
+
+		<div id="player">
+
+			<h1 id="player-type">Player - 1</h1>
+
+		</div>
+
+		<div id="grid">
+
+			<div class="row">
+
+				<div class="col">
+
+					<button class="btn btn-1"></button>
+
+				</div>
+
+				<div class="col">
+
+					<button class="btn btn-2"></button>
+
+				</div>
+
+				<div class="col">
+
+					<button class="btn btn-3"></button>
+
+				</div>
+
+				<div class="col">
+
+					<button class="btn btn-4"></button>
+
+				</div>
+
+				<div class="col">
+
+					<button class="btn btn-5"></button>
+
+				</div>
+
+				<div class="col">
+
+					<button class="btn btn-6"></button>
+
+				</div>
+
+				<div class="col">
+
+					<button class="btn btn-7"></button>
+
+				</div>
+
+			</div>
+
+			<div class="row">
+
+				<div class="col">
+
+					<button class="btn btn-8"></button>
+
+				</div>
+
+				<div class="col">
+
+					<button class="btn btn-9"></button>
+
+				</div>
+
+				<div class="col">
+
+					<button class="btn btn-10"></button>
+
+				</div>
+
+				<div class="col">
+
+					<button class="btn btn-11"></button>
+
+				</div>
+
+				<div class="col">
+
+					<button class="btn btn-12"></button>
+
+				</div>
+
+				<div class="col">
+
+					<button class="btn btn-13"></button>
+
+				</div>
+
+				<div class="col">
+
+					<button class="btn btn-14"></button>
+
+				</div>
+
+			</div>
+
+			<div class="row">
+
+				<div class="col">
+
+					<button class="btn btn-15"></button>
+
+				</div>
+
+				<div class="col">
+
+					<button class="btn btn-16"></button>
+
+				</div>
+
+				<div class="col">
+
+					<button class="btn btn-17"></button>
+
+				</div>
+
+				<div class="col">
+
+					<button class="btn btn-18"></button>
+
+				</div>
+
+				<div class="col">
+
+					<button class="btn btn-19"></button>
+
+				</div>
+
+				<div class="col">
+
+					<button class="btn btn-20"></button>
+
+				</div>
+
+				<div class="col">
+
+					<button class="btn btn-21"></button>
+
+				</div>
+
+			</div>
+
+			<div class="row">
+
+				<div class="col">
+
+					<button class="btn btn-22"></button>
+
+				</div>
+
+				<div class="col">
+
+					<button class="btn btn-23"></button>
+
+				</div>
+
+				<div class="col">
+
+					<button class="btn btn-24"></button>
+
+				</div>
+
+				<div class="col">
+
+					<button class="btn btn-25"></button>
+
+				</div>
+
+				<div class="col">
+
+					<button class="btn btn-26"></button>
+
+				</div>
+
+				<div class="col">
+
+					<button class="btn btn-27"></button>
+
+				</div>
+
+				<div class="col">
+
+					<button class="btn btn-28"></button>
+
+				</div>
+
+			</div>
+
+			<div class="row">
+
+				<div class="col">
+
+					<button class="btn btn-29"></button>
+
+				</div>
+
+				<div class="col">
+
+					<button class="btn btn-30"></button>
+
+				</div>
+
+				<div class="col">
+
+					<button class="btn btn-31"></button>
+
+				</div>
+
+				<div class="col">
+
+					<button class="btn btn-32"></button>
+
+				</div>
+
+				<div class="col">
+
+					<button class="btn btn-33"></button>
+
+				</div>
+
+				<div class="col">
+
+					<button class="btn btn-34"></button>
+
+				</div>
+
+				<div class="col">
+
+					<button class="btn btn-35"></button>
+
+				</div>
+
+			</div>
+
+			<div class="row">
+
+				<div class="col">
+
+					<button class="btn btn-36"></button>
+
+				</div>
+
+				<div class="col">
+
+					<button class="btn btn-37"></button>
+
+				</div>
+
+				<div class="col">
+
+					<button class="btn btn-38"></button>
+
+				</div>
+
+				<div class="col">
+
+					<button class="btn btn-39"></button>
+
+				</div>
+
+				<div class="col">
+
+					<button class="btn btn-40"></button>
+
+				</div>
+
+				<div class="col">
+
+					<button class="btn btn-41"></button>
+
+				</div>
+
+				<div class="col">
+
+					<button class="btn btn-42"></button>
+
+				</div>
+
+			</div>
+
+		</div>
+
+		<button type="button" id="reset-btn">Play Again</button>
+
+	</div>
+
+	<script src="script.js"></script>
+
+
+</body>
+</html>
